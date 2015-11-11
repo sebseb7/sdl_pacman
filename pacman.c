@@ -108,7 +108,7 @@ void pacman_init(void)
 				
 }
 
-struct pos_t translate(struct pos_t start,int orientation)
+static struct pos_t translate(struct pos_t start,int orientation)
 {
 	struct pos_t target;
 
@@ -146,7 +146,7 @@ struct pos_t translate(struct pos_t start,int orientation)
 }
 
 
-int check(struct pos_t start,int orientation)
+static int check(struct pos_t start,int orientation)
 {
 
 	struct pos_t target = translate(start,orientation);
@@ -166,7 +166,7 @@ int check(struct pos_t start,int orientation)
 	
 }
 
-void move(struct pos_t start,int orientation,struct pos_t* target)
+static void move(struct pos_t start,int orientation,struct pos_t* target)
 {
 	struct pos_t new = translate(start,orientation);
 	target->x=new.x;
@@ -485,8 +485,6 @@ static void set_block(unsigned int* pixelbuffer,unsigned int zoom,unsigned int x
 
 void pacman_render(unsigned int* pixelbuffer,int zoom)
 {
-//	lcdFillRGB(0,0,0);
-	
 	for(int x =0;x<24;x++)
 		for(int y=0;y<23;y++)
 		{
