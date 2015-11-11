@@ -467,14 +467,14 @@ void pacman_tick(int getkey(int)) {
 	return;
 }
 
-static void set_block(unsigned int* pixelbuffer,int zoom, int8_t x,int8_t y,int8_t r,int8_t g,int8_t b)
+static void set_block(unsigned int* pixelbuffer,unsigned int zoom,unsigned int x,unsigned int y,unsigned int r,unsigned int g,unsigned int b)
 {
 		unsigned int col = (r<<16)+(g<<8)+b;
 
 
-		for(int a = 0; a < zoom-1;a++)
+		for(unsigned int a = 0; a < zoom-1;a++)
 		{
-			for(int b = 0;b < zoom-1;b++)
+			for(unsigned int b = 0;b < zoom-1;b++)
 			{
 				pixelbuffer[((x*zoom+a)*23*zoom)+y*zoom+b] = col;
 			}
