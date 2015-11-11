@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-69999805-1', 'auto');
+		ga('send', 'pageview');
+	</script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -22,9 +26,9 @@
         <p>Pacman designed for a 24x24 pixel LED Matrix</p>
         <p class="view"><a href="https://github.com/sebseb7/sdl_pacman">View the Project on GitHub <small>sebseb7/sdl_pacman</small></a></p>
         <ul>
-          <li><a onclick="_gaq.push(['_trackEvent', 'button_win', 'clicked'])" href="https://github.com/sebseb7/sdl_pacman/releases/download/v1.3/pacman_win.zip">Download <strong>WIN</strong></a></li>
-          <li><a onclick="_gaq.push(['_trackEvent', 'button_osx', 'clicked'])" href="https://github.com/sebseb7/sdl_pacman/releases/download/v1.3/pacman_osx.zip">Download <strong>OSX</strong></a></li>
-          <li><a onclick="_gaq.push(['_trackEvent', 'button_github', 'clicked'])" href="https://github.com/sebseb7/sdl_pacman">View On <strong>GitHub</strong></a></li>
+          <li><a onclick="ga('send', 'event', 'Button', 'clicked', 'Download win');" href="https://github.com/sebseb7/sdl_pacman/releases/download/v1.3/pacman_win.zip">Download <strong>WIN</strong></a></li>
+          <li><a onclick="ga('send', 'event', 'Button', 'clicked', 'Download osx');" href="https://github.com/sebseb7/sdl_pacman/releases/download/v1.3/pacman_osx.zip">Download <strong>OSX</strong></a></li>
+          <li><a onclick="ga('send', 'event', 'Button', 'clicked', 'github');" href="https://github.com/sebseb7/sdl_pacman">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
@@ -32,19 +36,8 @@
       </section>
     </div>
     <footer>
-      <p><a onclick="_gaq.push(['_trackEvent', 'button_travis', 'clicked'])" href="https://travis-ci.org/sebseb7/sdl_pacman"><img src="https://travis-ci.org/sebseb7/sdl_pacman.svg?branch=master"/></a></p>
+      <p><a onclick="ga('send', 'event', 'Button', 'clicked', 'travis');" href="https://travis-ci.org/sebseb7/sdl_pacman"><img src="https://travis-ci.org/sebseb7/sdl_pacman.svg?branch=master"/></a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-69999805-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-    
   </body>
 </html>
